@@ -1,0 +1,16 @@
+C:\git\DebercBackend\src\DebercBackend.UseCases\bin\Debug\net9.0\DebercBackend.UseCases.deps.json
+C:\git\DebercBackend\src\DebercBackend.UseCases\bin\Debug\net9.0\DebercBackend.UseCases.dll
+C:\git\DebercBackend\src\DebercBackend.UseCases\bin\Debug\net9.0\DebercBackend.UseCases.pdb
+C:\git\DebercBackend\src\DebercBackend.UseCases\bin\Debug\net9.0\DebercBackend.Core.dll
+C:\git\DebercBackend\src\DebercBackend.UseCases\bin\Debug\net9.0\DebercBackend.Core.pdb
+C:\git\DebercBackend\src\DebercBackend.UseCases\obj\Debug\net9.0\DebercBackend.UseCases.csproj.AssemblyReference.cache
+C:\git\DebercBackend\src\DebercBackend.UseCases\obj\Debug\net9.0\DebercBackend.UseCases.GeneratedMSBuildEditorConfig.editorconfig
+C:\git\DebercBackend\src\DebercBackend.UseCases\obj\Debug\net9.0\DebercBackend.UseCases.AssemblyInfoInputs.cache
+C:\git\DebercBackend\src\DebercBackend.UseCases\obj\Debug\net9.0\DebercBackend.UseCases.AssemblyInfo.cs
+C:\git\DebercBackend\src\DebercBackend.UseCases\obj\Debug\net9.0\DebercBackend.UseCases.csproj.CoreCompileInputs.cache
+C:\git\DebercBackend\src\DebercBackend.UseCases\obj\Debug\net9.0\DebercBackend.UseCases.sourcelink.json
+C:\git\DebercBackend\src\DebercBackend.UseCases\obj\Debug\net9.0\DebercBa.406F4BCA.Up2Date
+C:\git\DebercBackend\src\DebercBackend.UseCases\obj\Debug\net9.0\DebercBackend.UseCases.dll
+C:\git\DebercBackend\src\DebercBackend.UseCases\obj\Debug\net9.0\refint\DebercBackend.UseCases.dll
+C:\git\DebercBackend\src\DebercBackend.UseCases\obj\Debug\net9.0\DebercBackend.UseCases.pdb
+C:\git\DebercBackend\src\DebercBackend.UseCases\obj\Debug\net9.0\ref\DebercBackend.UseCases.dll

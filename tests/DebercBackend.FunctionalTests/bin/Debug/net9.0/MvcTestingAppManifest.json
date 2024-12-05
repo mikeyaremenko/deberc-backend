@@ -1,0 +1,7 @@
+{
+  "DebercBackend.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\git\\DebercBackend\\src\\DebercBackend.Core",
+  "DebercBackend.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\git\\DebercBackend\\src\\DebercBackend.Infrastructure",
+  "DebercBackend.ServiceDefaults, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\git\\DebercBackend\\src\\DebercBackend.ServiceDefaults",
+  "DebercBackend.UseCases, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\git\\DebercBackend\\src\\DebercBackend.UseCases",
+  "DebercBackend.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\git\\DebercBackend\\src\\DebercBackend.Web"
+}
