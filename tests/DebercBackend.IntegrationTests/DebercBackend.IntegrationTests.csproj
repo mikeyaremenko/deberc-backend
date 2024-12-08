@@ -3,6 +3,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="NSubstitute" />
     <PackageReference Include="xunit.runner.visualstudio">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -18,7 +19,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\DebercBackend.Infrastructure\DebercBackend.Infrastructure.csproj" />
-    <ProjectReference Include="..\DebercBackend.UnitTests\DebercBackend.UnitTests.csproj" />
   </ItemGroup>
 
   <ItemGroup>

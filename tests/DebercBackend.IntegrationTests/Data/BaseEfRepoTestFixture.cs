@@ -1,5 +1,6 @@
 ﻿using DebercBackend.Core.ContributorAggregate;
 using DebercBackend.Infrastructure.Data;
+using NSubstitute;
 
 namespace DebercBackend.IntegrationTests.Data;
 
