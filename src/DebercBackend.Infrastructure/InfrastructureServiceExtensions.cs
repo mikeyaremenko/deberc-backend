@@ -3,6 +3,7 @@ using DebercBackend.Core.Services;
 using DebercBackend.Infrastructure.Data;
 using DebercBackend.Infrastructure.Data.Queries;
 using DebercBackend.UseCases.Contributors.List;
+using DebercBackend.UseCases.Games.List;
 
 
 namespace DebercBackend.Infrastructure;
@@ -21,6 +22,7 @@ public static class InfrastructureServiceExtensions
     services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>))
            .AddScoped(typeof(IReadRepository<>), typeof(EfRepository<>))
            .AddScoped<IListContributorsQueryService, ListContributorsQueryService>()
+           .AddScoped<IListGamesQueryService, ListGamesQueryService>()
            .AddScoped<IDeleteContributorService, DeleteContributorService>();
 
 

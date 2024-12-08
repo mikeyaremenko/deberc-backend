@@ -10,6 +10,6 @@ public class Game : EntityBase, IAggregateRoot
     public Team? SecondTeam { get; set; }
     public Player? Dealer { get; set; }
     public int OpenPoints { get; set; }
-    public List<Round> Rounds { get; set; } = new List<Round>();
+    public List<Round> Rounds { get; set; } = [];
     public GameStatus Status { get; set; } = GameStatus.Created;
 }
