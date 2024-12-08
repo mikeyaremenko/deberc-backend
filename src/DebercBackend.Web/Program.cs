@@ -1,4 +1,6 @@
 ﻿using DebercBackend.Web.Configurations;
+using DebercBackend.Infrastructure.Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,11 +25,14 @@ builder.Services.AddFastEndpoints()
                   o.ShortSchemaNames = true;
                 });
 
+var connectionString = builder.Configuration.GetConnectionString("MsSqlConnection") ?? string.Empty;                
+builder.Services.AddApplicationDbContext(connectionString);
+
 builder.AddServiceDefaults();
 
 var app = builder.Build();
 
-await app.UseAppMiddlewareAndSeedDatabase();
+app.UseAppMiddlewareAndSeedDatabase();
 
 app.Run();
 

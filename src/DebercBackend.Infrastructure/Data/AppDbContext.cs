@@ -1,4 +1,5 @@
 ﻿using DebercBackend.Core.ContributorAggregate;
+using DebercBackend.Core.GameAggregate;
 
 namespace DebercBackend.Infrastructure.Data;
 public class AppDbContext(DbContextOptions<AppDbContext> options,
@@ -6,7 +7,14 @@ public class AppDbContext(DbContextOptions<AppDbContext> options,
 {
   private readonly IDomainEventDispatcher? _dispatcher = dispatcher;
 
-  public DbSet<Contributor> Contributors => Set<Contributor>();
+  public DbSet<Game> Games => Set<Game>();
+  public DbSet<Team> Teams => Set<Team>();
+  public DbSet<Player> Players => Set<Player>();
+  public DbSet<Round> Rounds => Set<Round>();
+  public DbSet<Combination> Combinations => Set<Combination>();
+  public DbSet<Trick> Tricks => Set<Trick>();
+  public DbSet<Card> Cards => Set<Card>();
+  public DbSet<User> User => Set<User>();
 
   protected override void OnModelCreating(ModelBuilder modelBuilder)
   {
