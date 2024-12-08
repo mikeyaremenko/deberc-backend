@@ -1,6 +1,0 @@
-{
-  "DebercBackend.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\git\\DebercBackend\\src\\DebercBackend.Core",
-  "DebercBackend.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\git\\DebercBackend\\src\\DebercBackend.Infrastructure",
-  "DebercBackend.UnitTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\git\\DebercBackend\\tests\\DebercBackend.UnitTests",
-  "DebercBackend.UseCases, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\git\\DebercBackend\\src\\DebercBackend.UseCases"
-}
