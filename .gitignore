@@ -1,0 +1,34 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio cache files
+.vs/
+
+# User-specific files
+*.user
+*.suo
+*.userprefs
+*.dotSettings.user
+
+# Backup & temporary files
+*.bak
+*~
+
+# Visual Studio Code workspace settings
+.vscode/
+
+# NuGet Packages
+packages/
+*.nupkg
+*.snupkg
+
+# Distribution directories
+dist/
+
+# Rider project files
+.idea/
+*.sln.iml
+
+# Logs
+*.log

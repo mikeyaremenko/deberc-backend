@@ -16,7 +16,7 @@ public static class InfrastructureServiceExtensions
     string? connectionString = config.GetConnectionString("MsSqlConnection");
     Guard.Against.Null(connectionString);
     services.AddDbContext<AppDbContext>(options =>
-     options.UseMsSqlServer(connectionString));
+     options.UseSqlServer(connectionString));
 
     services.AddScoped(typeof(IRepository<>), typeof(EfRepository<>))
            .AddScoped(typeof(IReadRepository<>), typeof(EfRepository<>))
