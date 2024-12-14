@@ -2,6 +2,7 @@ using Xunit.Abstractions;
 
 namespace DebercBackend.IntegrationTests.Games;
 
+[Collection("TestContainerFixture")]
 public class ListTests(ITestOutputHelper helper) : BaseTest(helper)
 {
   public override string ApiUrl => "/api/v1/games";

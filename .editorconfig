@@ -143,6 +143,8 @@ csharp_style_prefer_top_level_statements = true:silent
 csharp_style_prefer_primary_constructors = true:suggestion
 csharp_style_expression_bodied_lambdas = true:silent
 csharp_style_expression_bodied_local_functions = false:silent
+# Custom rules
+dotnet_diagnostic.CS0201.severity = none
 ###############################
 # VB Coding Conventions       #
 ###############################

@@ -1,4 +1,6 @@
 using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
+using Ardalis.SmartEnum.JsonNet;
 
 namespace DebercBackend.Core.GameAggregate;
 
@@ -11,5 +13,7 @@ public class Game : EntityBase, IAggregateRoot
     public Player? Dealer { get; set; }
     public int OpenPoints { get; set; }
     public List<Round> Rounds { get; set; } = [];
+    
+    [JsonConverter(typeof(SmartEnumNameConverter<GameStatus, int>))]
     public GameStatus Status { get; set; } = GameStatus.Created;
 }
