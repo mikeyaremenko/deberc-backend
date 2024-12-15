@@ -36,6 +36,8 @@ public static class MiddlewareConfig
           {
             ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver()
           };
+          settings.Converters.Add(new SmartEnumNameConverter<GameStatus, int>());
+          settings.Converters.Add(new SmartEnumNameConverter<CombinationType, int>());
           rsp.ContentType = cType;
           return rsp.WriteAsync(Newtonsoft.Json.JsonConvert.SerializeObject(dto, settings), ct);
         };
