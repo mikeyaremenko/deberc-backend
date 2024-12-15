@@ -4,7 +4,7 @@ using Ardalis.SmartEnum.JsonNet;
 
 namespace DebercBackend.Core.GameAggregate;
 
-public class Game
+public class Game : IAggregateRoot
 {
     public int Id { get; set; }
 
@@ -21,7 +21,6 @@ public class Game
 
     public List<Round> Rounds { get; set; } = [];
     
-
     [JsonConverter(typeof(SmartEnumNameConverter<GameStatus, int>))]
     public GameStatus Status { get; set; } = GameStatus.Created;
 }

@@ -9,7 +9,7 @@ public class ListTests(ITestOutputHelper helper) : BaseTest(helper)
   public override string ApiUrl => "/api/v1/games";
 
   [Fact]
-  public async Task Returns_GameList()
+  public async Task ReturnsGameList()
   {
     await AssertGetEndpointWithoutIdf();
   }

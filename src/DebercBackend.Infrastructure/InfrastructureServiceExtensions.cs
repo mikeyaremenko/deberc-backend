@@ -25,7 +25,6 @@ public static class InfrastructureServiceExtensions
            .AddScoped<IListGamesQueryService, ListGamesQueryService>()
            .AddScoped<IDeleteContributorService, DeleteContributorService>();
 
-
     logger.LogInformation("{Project} services registered", "Infrastructure");
 
     return services;

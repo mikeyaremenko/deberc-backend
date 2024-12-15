@@ -27,15 +27,13 @@ public static class MiddlewareConfig
           var settings = new Newtonsoft.Json.JsonSerializerSettings();
           settings.Converters.Add(new SmartEnumNameConverter<GameStatus, int>());
           settings.Converters.Add(new SmartEnumNameConverter<CombinationType, int>());
+          
           using var reader = new StreamReader(req.Body);
           return Newtonsoft.Json.JsonConvert.DeserializeObject(await reader.ReadToEndAsync(ct), tDto, settings);
         };
         config.Serializer.ResponseSerializer = (rsp, dto, cType, jCtx, ct) =>
         {
-          var settings = new Newtonsoft.Json.JsonSerializerSettings
-          {
-            ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver()
-          };
+          var settings = new Newtonsoft.Json.JsonSerializerSettings();
           settings.Converters.Add(new SmartEnumNameConverter<GameStatus, int>());
           settings.Converters.Add(new SmartEnumNameConverter<CombinationType, int>());
           rsp.ContentType = cType;
@@ -43,7 +41,6 @@ public static class MiddlewareConfig
         };
       })
       .UseSwaggerGen();
-
 
     app.UseHttpsRedirection(); // Note this will drop Authorization headers
 
