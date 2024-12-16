@@ -33,7 +33,10 @@ public static class MiddlewareConfig
         };
         config.Serializer.ResponseSerializer = (rsp, dto, cType, jCtx, ct) =>
         {
-          var settings = new Newtonsoft.Json.JsonSerializerSettings();
+          var settings = new Newtonsoft.Json.JsonSerializerSettings()
+          {
+            ContractResolver = new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver(),
+          };
           settings.Converters.Add(new SmartEnumNameConverter<GameStatus, int>());
           settings.Converters.Add(new SmartEnumNameConverter<CombinationType, int>());
           rsp.ContentType = cType;

@@ -21,6 +21,5 @@ public class Game : IAggregateRoot
 
     public List<Round> Rounds { get; set; } = [];
     
-    [JsonConverter(typeof(SmartEnumNameConverter<GameStatus, int>))]
     public GameStatus Status { get; set; } = GameStatus.Created;
 }

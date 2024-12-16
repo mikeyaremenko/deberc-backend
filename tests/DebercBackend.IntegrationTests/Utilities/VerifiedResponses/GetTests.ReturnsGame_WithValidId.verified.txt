@@ -1,0 +1,52 @@
+﻿{
+  "id": 1,
+  "name": "Test game1",
+  "firstTeam": {
+    "id": 1,
+    "name": "The winners",
+    "score": 0,
+    "firstPlayer": {
+      "id": 1,
+      "name": "John",
+      "password": "John123",
+      "image": null,
+      "index": 0
+    },
+    "secondPlayer": {
+      "id": 2,
+      "name": "Matthew",
+      "password": "Matthew123",
+      "image": null,
+      "index": 1
+    }
+  },
+  "secondTeam": {
+    "id": 2,
+    "name": "The loosers",
+    "score": 0,
+    "firstPlayer": {
+      "id": 3,
+      "name": "Tim",
+      "password": "Tim123",
+      "image": null,
+      "index": 2
+    },
+    "secondPlayer": {
+      "id": 4,
+      "name": "Gregor",
+      "password": "Gregor123",
+      "image": null,
+      "index": 3
+    }
+  },
+  "dealer": {
+    "id": 2,
+    "name": "Matthew",
+    "password": "Matthew123",
+    "image": null,
+    "index": 1
+  },
+  "openPoints": 1001,
+  "rounds": [],
+  "status": "Created"
+}
