@@ -6,8 +6,8 @@ public class GetGameValidator : Validator<GetGameByIdRequest>
 {
   public GetGameValidator()
   {
-    RuleFor(x => x.Id)
-      .Must(id => int.TryParse(id, out var result) && result > 0)
+    RuleFor(x => x.GameId)
+      .Must(id => id > 0)
       .WithMessage("The Id must be a valid number greater than 0.");
   }
 }

@@ -49,6 +49,9 @@
     },
     "openPoints": 1001,
     "rounds": [],
-    "status": "Created"
+    "status": {
+      "name": "Created",
+      "value": 0
+    }
   }
 ]

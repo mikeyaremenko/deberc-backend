@@ -20,7 +20,7 @@ public class GetById(IMediator _mediator)
 
   public override async Task HandleAsync(GetGameByIdRequest request, CancellationToken cancellationToken)
   {
-    var query = new GetGameQuery(request.Id);
+    var query = new GetGameQuery(request.GameId);
 
     var result = await _mediator.Send(query, cancellationToken);
 

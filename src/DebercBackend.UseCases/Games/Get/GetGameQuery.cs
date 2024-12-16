@@ -2,4 +2,4 @@
 
 namespace DebercBackend.UseCases.Games.Get;
 
-public record GetGameQuery(string GameId) : IQuery<Result<Game>>;
+public record GetGameQuery(int GameId) : IQuery<Result<Game>>;

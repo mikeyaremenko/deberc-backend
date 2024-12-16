@@ -17,7 +17,6 @@ public class GetTests(ITestOutputHelper helper) : BaseTest(helper)
   [Theory]
   [InlineData("-1")]
   [InlineData("0")]
-  [InlineData("abc")]
   public async Task ReturnsBadRequest_WithInvalidId(string id)
   {
     await AssertBadRequest(id);
@@ -25,6 +24,7 @@ public class GetTests(ITestOutputHelper helper) : BaseTest(helper)
 
   [Theory]
   [InlineData("99999")]
+  [InlineData("abc")]
   public async Task ReturnsNotFound_WithInvalidId(string id)
   {
     await AssertNotFound(id);
