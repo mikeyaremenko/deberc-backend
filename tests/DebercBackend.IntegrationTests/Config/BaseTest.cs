@@ -6,10 +6,6 @@ namespace DebercBackend.IntegrationTests.Config;
 
 public abstract class BaseTest
 {
-  protected const string DefaultIdf = "0000129";
-  protected const string InvalidIdf = "invalid";
-  protected const string NotExistingIdf = "0000000";
-
   protected readonly HttpClient _client;
   protected readonly TestWebApplicationFactory _factory;
 
@@ -28,11 +24,7 @@ public abstract class BaseTest
 
   private async Task AssertGetEndpoint(bool withId, string? customIdf = null)
   {
-    var url = withId ? $"{ApiUrl}/{DefaultIdf}" : ApiUrl;
-    if (customIdf is not null)
-    {
-      url = $"{ApiUrl}/{customIdf}";
-    }
+    var url = withId ? $"{ApiUrl}/{customIdf}" : ApiUrl;
     var response = await _client.GetAsync(url);
 
     var responseContent = await response.Content.ReadAsStringAsync();
@@ -40,21 +32,14 @@ public abstract class BaseTest
     await responseContent.VerifyResponse();
   }
 
-  protected async Task AssertBadRequest() => await AssertResponseCode(HttpStatusCode.BadRequest);
-  protected async Task AssertBadRequestWithCustomIdf(string customId, string? urlSuffix = null)
-    => await AssertResponseCode(HttpStatusCode.BadRequest, customId, urlSuffix);
-  protected async Task AssertNotFound() => await AssertResponseCode(HttpStatusCode.NotFound);
-  protected async Task AssertNotFoundWithCustomIdf(string customId, string? urlSuffix = null)
-    => await AssertResponseCode(HttpStatusCode.NotFound, customId, urlSuffix);
+  protected async Task AssertBadRequest(string customId)
+    => await AssertResponseCode(HttpStatusCode.BadRequest, customId);
+  protected async Task AssertNotFound(string customId)
+    => await AssertResponseCode(HttpStatusCode.NotFound, customId);
 
-  private async Task AssertResponseCode(HttpStatusCode code, string? customId = null, string? urlSuffix = null)
+  private async Task AssertResponseCode(HttpStatusCode code, string customId)
   {
-    var idf = code == HttpStatusCode.BadRequest ? InvalidIdf : NotExistingIdf;
-    if (customId is not null)
-    {
-      idf = customId;
-    }
-    var url = urlSuffix is null ? $"{ApiUrl}/{idf}" : $"{ApiUrl}/{idf}/{urlSuffix}";
+    var url = $"{ApiUrl}/{customId}";
     var response = await _client.GetAsync(url);
 
     Assert.Equal(code, response.StatusCode);

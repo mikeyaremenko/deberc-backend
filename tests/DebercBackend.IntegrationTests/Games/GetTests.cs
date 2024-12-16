@@ -20,13 +20,13 @@ public class GetTests(ITestOutputHelper helper) : BaseTest(helper)
   [InlineData("abc")]
   public async Task ReturnsBadRequest_WithInvalidId(string id)
   {
-    await AssertBadRequestWithCustomIdf(id);
+    await AssertBadRequest(id);
   }
 
   [Theory]
   [InlineData("99999")]
   public async Task ReturnsNotFound_WithInvalidId(string id)
   {
-    await AssertNotFoundWithCustomIdf(id);
+    await AssertNotFound(id);
   }
 }
